@@ -8,8 +8,8 @@ export default function CarCard({ car, last = false }: { car: Car; last?: boolea
 
   return (
     <Link href={`/dashboard/cars/${car.id}`} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 18px', borderBottom: last ? 'none' : '1px solid var(--border)', textDecoration: 'none', transition: 'background 0.15s' }}
-      onMouseEnter={e => (e.currentTarget.style.background = 'var(--surface2)')}
-      onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+      
+      >
       <div style={{ width: '52px', height: '40px', borderRadius: '8px', background: 'var(--surface3)', flexShrink: 0, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px' }}>
         {car.photos?.[0] ? <img src={car.photos[0]} alt={car.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : '🚗'}
       </div>
@@ -25,4 +25,5 @@ export default function CarCard({ car, last = false }: { car: Car; last?: boolea
     </Link>
   )
 }
+
 

@@ -33,8 +33,8 @@ export default async function DashboardPage() {
       {/* Subscription banners */}
       {!isActive && !isPastDue && (
         <Link href="/pricing" className="sub-banner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--brand-dim)', border: '1px solid rgba(249,115,22,0.25)', borderRadius: '14px', padding: '16px 20px', marginBottom: '24px', textDecoration: 'none', transition: 'background 0.2s' }}
-          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(249,115,22,0.18)')}
-          onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-dim)')}>
+          
+          >
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <span style={{ fontSize: '22px' }}>🚀</span>
             <div>
@@ -75,8 +75,8 @@ export default async function DashboardPage() {
       {/* Add car CTA */}
       {isActive ? (
         <Link href="/dashboard/add" className="add-car-link" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: '14px', padding: '16px 20px', marginBottom: '24px', textDecoration: 'none', transition: 'border-color 0.2s' }}
-          onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--border2)')}
-          onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}>
+          
+          >
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <div style={{ width: '40px', height: '40px', background: 'var(--brand-dim)', border: '1px solid rgba(249,115,22,0.2)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <svg width="18" height="18" fill="none" stroke="var(--brand)" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
@@ -124,5 +124,6 @@ export default async function DashboardPage() {
     </div>
   )
 }
+
 
 
