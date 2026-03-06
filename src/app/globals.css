@@ -284,3 +284,9 @@ body {
   border-top: 1px solid var(--border);
   padding-bottom: env(safe-area-inset-bottom);
 }
+
+.sub-banner { transition: background 0.2s; }
+.sub-banner:hover { background: rgba(249,115,22,0.18) !important; }
+
+.add-car-link { transition: border-color 0.2s; }
+.add-car-link:hover { border-color: var(--border2) !important; }
