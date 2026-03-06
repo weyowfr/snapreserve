@@ -1,3 +1,4 @@
+'use client'
 import { createServerSupabaseClient } from '@/lib/supabase-server'
 import Link from 'next/link'
 import CarCard from '@/components/CarCard'
@@ -124,3 +125,4 @@ export default async function DashboardPage() {
     </div>
   )
 }
+

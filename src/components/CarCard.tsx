@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import { Car } from '@/lib/types'
 
@@ -24,3 +25,4 @@ export default function CarCard({ car, last = false }: { car: Car; last?: boolea
     </Link>
   )
 }
+
