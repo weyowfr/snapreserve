@@ -396,9 +396,7 @@ export default function Landing() {
               { icon: '📊', text: 'Dashboard avec toutes tes réservations' },
               { icon: '💸', text: '5% de frais seulement — tout le reste pour toi' },
             ].map((f, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 16px', border: '1.5px solid rgba(13,13,13,0.08)', borderRadius: '12px', transition: 'border-color 0.2s, background 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = '#f97316'; e.currentTarget.style.background = 'rgba(249,115,22,0.03)' }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(13,13,13,0.08)'; e.currentTarget.style.background = 'transparent' }}>
+              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 16px', border: '1.5px solid rgba(13,13,13,0.08)', borderRadius: '12px', transition: 'border-color 0.2s, background 0.2s' }}}}>
                 <span style={{ fontSize: '18px', flexShrink: 0 }}>{f.icon}</span>
                 <span style={{ fontSize: '14px', fontWeight: 500, color: '#0d0d0d' }}>{f.text}</span>
               </div>
@@ -484,9 +482,7 @@ export default function Landing() {
                   </p>
                 </div>
 
-                <Link href="/register" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '15px', background: '#f97316', color: '#fff', fontWeight: 700, fontSize: '15px', borderRadius: '12px', textDecoration: 'none', transition: 'background 0.2s, transform 0.15s' }}
-                  onMouseEnter={e => { e.currentTarget.style.background = '#fb923c'; e.currentTarget.style.transform = 'translateY(-1px)' }}
-                  onMouseLeave={e => { e.currentTarget.style.background = '#f97316'; e.currentTarget.style.transform = 'none' }}>
+                <Link href="/register" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '15px', background: '#f97316', color: '#fff', fontWeight: 700, fontSize: '15px', borderRadius: '12px', textDecoration: 'none', transition: 'background 0.2s, transform 0.15s' }}}}>
                   Commencer maintenant
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </Link>
@@ -539,15 +535,11 @@ export default function Landing() {
             19,99€/mois — sans engagement — prêt en 2 minutes.
           </p>
           <div style={{ position: 'relative', display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/register" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 36px', background: '#f97316', color: '#fff', fontWeight: 700, fontSize: '16px', borderRadius: '100px', textDecoration: 'none', transition: 'all 0.2s' }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#fb923c'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(249,115,22,0.4)' }}
-              onMouseLeave={e => { e.currentTarget.style.background = '#f97316'; e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none' }}>
+            <Link href="/register" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 36px', background: '#f97316', color: '#fff', fontWeight: 700, fontSize: '16px', borderRadius: '100px', textDecoration: 'none', transition: 'all 0.2s' }}}}>
               Créer mon compte gratuit
               <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </Link>
-            <Link href="/pricing" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '16px 28px', border: '1.5px solid rgba(245,240,232,0.15)', color: 'rgba(245,240,232,0.6)', fontWeight: 500, fontSize: '15px', borderRadius: '100px', textDecoration: 'none', transition: 'all 0.2s' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(245,240,232,0.35)'; e.currentTarget.style.color = '#f5f0e8' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(245,240,232,0.15)'; e.currentTarget.style.color = 'rgba(245,240,232,0.6)' }}>
+            <Link href="/pricing" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '16px 28px', border: '1.5px solid rgba(245,240,232,0.15)', color: 'rgba(245,240,232,0.6)', fontWeight: 500, fontSize: '15px', borderRadius: '100px', textDecoration: 'none', transition: 'all 0.2s' }}}}>
               Voir les tarifs
             </Link>
           </div>
@@ -573,3 +565,4 @@ export default function Landing() {
     </div>
   )
 }
+
