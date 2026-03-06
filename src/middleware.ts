@@ -12,10 +12,10 @@ export async function middleware(req: NextRequest) {
         getAll() {
           return req.cookies.getAll()
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: { name: string; value: string; options?: object }[]) {
           cookiesToSet.forEach(({ name, value, options }) => {
             req.cookies.set(name, value)
-            res.cookies.set(name, value, options)
+            res.cookies.set(name, value, options as any)
           })
         },
       },
@@ -24,14 +24,12 @@ export async function middleware(req: NextRequest) {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Rediriger vers login si pas connecté et route protégée
   if (!user && req.nextUrl.pathname.startsWith('/dashboard')) {
     const loginUrl = new URL('/login', req.url)
     loginUrl.searchParams.set('redirect', req.nextUrl.pathname)
     return NextResponse.redirect(loginUrl)
   }
 
-  // Rediriger vers dashboard si déjà connecté et sur login/register
   if (user && (req.nextUrl.pathname === '/login' || req.nextUrl.pathname === '/register')) {
     return NextResponse.redirect(new URL('/dashboard', req.url))
   }
